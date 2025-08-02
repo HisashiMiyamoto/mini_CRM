@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini CRM</title>
+  <script src="crm.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">📋 Mini CRM</h1>
+
+    <form id="crmForm" class="mb-6 space-y-4 bg-white p-4 rounded shadow">
+      <div>
+        <label class="block font-semibold mb-1">Ім'я клієнта:</label>
+        <input type="text" id="name" class="w-full border px-3 py-2 rounded" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Email:</label>
+        <input type="email" id="email" class="w-full border px-3 py-2 rounded" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Коментар:</label>
+        <textarea id="note" class="w-full border px-3 py-2 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Додати клієнта</button>
+    </form>
+
+    <h2 class="text-2xl font-semibold mb-2">Список клієнтів</h2>
+    <table class="w-full bg-white rounded shadow overflow-hidden">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="text-left px-4 py-2">Ім'я</th>
+          <th class="text-left px-4 py-2">Email</th>
+          <th class="text-left px-4 py-2">Коментар</th>
+          <th class="text-left px-4 py-2">Дія</th>
+        </tr>
+      </thead>
+      <tbody id="clientList"></tbody>
+    </table>
+  </div>
+</body>
+</html>
